@@ -103,7 +103,7 @@ const fr: Dict = {
   "access.titleItalic": "pour les investisseurs canadiens.",
   "access.body": "Les États-Unis demeurent l'un des marchés immobiliers les plus profonds et les plus institutionnels au monde — caractérisés par leur envergure, leur liquidité et la rigueur de leurs opérateurs. Bashir Capital existe pour offrir aux investisseurs canadiens un accès plus clair et mieux informé à ce marché.",
   "access.k1": "Repérage",
-  "access.v1": "Où le ciel est la limite.\n\n\nPour les investisseurs canadiens, certains marchés américains peuvent offrir :\n\n\n-Un potentiel de « cashflow » plus fort\n-Plus de disponibilité d'inventaire\n-Une diversification géographique\n-Une croissance démographique et de l'emploi à long terme\n-Accès à des écosystèmes multifamiliaux plus vastes\n-Accès à des actifs gérés de façon professionnelle\n\n",
+  "access.v1": "Où le ciel est la limite.\n\n\nPour les investisseurs canadiens, certains marchés américains peuvent offrir :\n\n\n-Un potentiel de «cashflow» plus fort\n-Plus de disponibilité d'inventaire\n-Une diversification géographique\n-Une croissance démographique et de l'emploi à long terme\n-Accès à des écosystèmes multifamiliaux plus vastes\n-Accès à des actifs gérés de façon professionnelle\n\n",
   "access.k2": "",
   "access.v2": "\n",
   "access.k3": "",
