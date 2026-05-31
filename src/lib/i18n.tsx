@@ -14,7 +14,7 @@ const en: Dict = {
 
   "hero.eyebrow": "BASHIR CAPITAL · MONTRÉAL → CLEVELAND",
   "hero.title": "A bridge to American real estate.",
-  "hero.sub": "A Canadian-owned company acquiring and operating properties in the United States.",
+  "hero.sub": "Bashir Capital is a Canadian-owned company acquiring and operating real estate assets in the United States.",
   "hero.cta1": "Get in Touch",
   "hero.cta2": "How It Works",
 
@@ -94,7 +94,7 @@ const fr: Dict = {
 
   "hero.eyebrow": "BASHIR CAPITAL · MONTRÉAL → CLEVELAND",
   "hero.title": "Un pont vers l'immobilier américain.",
-  "hero.sub": "Une société canadienne axée sur l’acquisition et la détention d’actifs immobiliers aux États-Unis.",
+  "hero.sub": "Bashir Capital est une société canadienne axée sur l’acquisition et la détention d’actifs immobiliers aux États-Unis.",
   "hero.cta1": "Nous joindre",
   "hero.cta2": "Notre approche",
 
