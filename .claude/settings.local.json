@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(bun install *)",
+      "PowerShell(Get-Command bun -ErrorAction SilentlyContinue; if \\(-not $?\\) { Get-ChildItem \"$env:USERPROFILE\\\\.bun\\\\bin\\\\bun.exe\" -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\Users\\\\hussn\\\\.bun\\\\bin\\\\bun.exe\" -ErrorAction SilentlyContinue })",
+      "PowerShell($env:PATH)"
+    ]
+  }
+}
