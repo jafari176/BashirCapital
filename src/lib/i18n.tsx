@@ -111,7 +111,7 @@ const fr: Dict = {
 
   "about.eyebrow": "À propos",
   "about.title": "Une plateforme immobilière transfrontalière, moderne.",
-  "about.p1": "Bashir Capital est une société canadienne spécialisée dans l'acquisition et la détention d'actifs immobiliers aux États-Unis. Nous investissons avec une vision à long terme et une approche disciplinée axée sur la création de valeur.",
+  "about.p1": "Nous investissons avec une vision à long terme et une approche disciplinée axée sur la création de valeur.",
   "about.p2": "",
   "about.p3": "Nous sommes bilingues par conception. Nous accompagnons nos investisseurs en français et en anglais, avec la fluidité culturelle que requiert l'investissement transfrontalier.",
   "about.s1k": "Montréal",
