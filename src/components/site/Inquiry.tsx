@@ -3,11 +3,37 @@ import { useI18n } from "@/lib/i18n";
 
 export function Inquiry() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const { t } = useI18n();
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError(null);
+
+    const form = e.currentTarget;
+    const data = {
+      firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
+      lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      language: (form.elements.namedItem("language") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("send failed");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -56,14 +82,19 @@ export function Inquiry() {
                 />
               </div>
 
+              {error && (
+                <p className="text-sm text-red-500">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="group inline-flex items-center gap-3 text-sm uppercase tracking-[0.28em] text-charcoal"
+                disabled={sending}
+                className="group inline-flex items-center gap-3 text-sm uppercase tracking-[0.28em] text-charcoal disabled:opacity-50"
               >
                 <span className="border-b border-charcoal/60 pb-1 transition-colors group-hover:border-blue-accent group-hover:text-blue-accent">
-                  {t("inq.submit")}
+                  {sending ? "Sending…" : t("inq.submit")}
                 </span>
-                <span className="transition-transform group-hover:translate-x-1">→</span>
+                {!sending && <span className="transition-transform group-hover:translate-x-1">→</span>}
               </button>
             </form>
           )}

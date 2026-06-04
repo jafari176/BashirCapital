@@ -4,4 +4,7 @@
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
   "main": "src/server.ts",
+  "vars": {
+    "RESEND_API_KEY": "re_4GgHaq7F_HULcHSgNrDkzvadtuHz7v1Ef"
+  }
 }
