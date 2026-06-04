@@ -27,10 +27,11 @@ export function Inquiry() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data),
       });
-      if (!res.ok) throw new Error("send failed");
+      const json = await res.json();
+      if (!res.ok) throw new Error(json?.message ?? "send failed");
       setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please try again or email us directly.");
+    } catch (err) {
+      setError(`Error: ${err instanceof Error ? err.message : String(err)}`);
     } finally {
       setSending(false);
     }
